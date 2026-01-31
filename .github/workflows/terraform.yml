@@ -1,12 +1,12 @@
 name: Terraform Deploy
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_dispatch:
+    # Define inputs that are required for the manual trigger
+    inputs:
+      instanceName:
+        description: 'Name of the Storage Account'
+        required: true  
 
 permissions:
   id-token: write
